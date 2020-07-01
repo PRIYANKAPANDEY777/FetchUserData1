@@ -1,0 +1,13 @@
+import requests
+
+def SimilarWords(keyword):
+    #API call
+    url = "https://api.datamuse.com/sug?s=" + keyword
+    response = requests.get(url)
+    print(response.content)
+
+def main():
+    keyword = input(" Enter a keyword to search:")
+    SimilarWords(keyword)
+
+main()
